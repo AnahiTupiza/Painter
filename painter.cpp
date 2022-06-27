@@ -49,11 +49,11 @@ void Painter::paintEvent(QPaintEvent *event)
     pintor.drawRect(400, 100, 100, 100);
 
     //crear un nuevo color
-    QColor miColor(255,221,129,128);
+    QColor miColor(255,221,129);
 
     //crear un nuevo pincel
     QPen pincel2;
-    pincel2.setColor(Qt::yellow);
+    pincel2.setColor(Qt::black);
     pincel2.setWidth(5);
     pincel2.setStyle(Qt::DotLine);
 
@@ -65,6 +65,23 @@ void Painter::paintEvent(QPaintEvent *event)
 
     //dibujor un circulo
     pintor.drawEllipse(450,100,100,100);
+
+    //trabajo en clase
+    pintor.setPen(Qt::gray);
+    pintor.setFont(QFont("Times", 36));
+    pintor.drawText(50,290, "Trabajo en clase");
+
+    pintor.setPen(Qt::red);
+    pintor.setWindow(-60,-60,100,100);
+    pintor.rotate(45);
+    pintor.drawRect(-6,-6,10,10);
+
+    pintor.setPen(Qt::black);
+    pintor.drawLine(200, 100, 200, 200);
+
+    pintor.rotate(10);
+    pintor.drawRect(5,5,70,70);
+
 
 
 }
